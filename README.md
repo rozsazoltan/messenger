@@ -43,5 +43,16 @@ You can find the latest verified installers for Windows (.msi), macOS (.dmg), an
 
 👉 [Download Latest Release](https://github.com/rozsazoltan/messenger/releases/latest)
 
+### Key Enhancements
+
+• **Direct Link Handling**  
+The app actively intercepts link tracking. While Facebook typically routes external links through their own tracking servers to build interest profiles, this application blocks those scripts and opens the target URL directly in your default browser.
+
+• **Noise Reduction**  
+The interface is optimized to eliminate distractions. Upon startup, the app hides Feeds, Reels, and other non-messaging elements. Internal Facebook links are also forced into external windows to ensure your chat environment remains undisturbed.
+
+• **Automated Updates**  
+To maintain compatibility with Facebook's frequent UI and technical changes, the app features a built-in update system. When a new version is released to address these changes, you will receive a notification within the app. Updates are delivered from verified, signed GitHub releases and can be installed with a single click.
+
 ---
 **Maintained by:** [rozsazoltan](https://stackoverflow.com/users/15167500/rozsazoltan)

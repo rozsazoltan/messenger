@@ -22,7 +22,7 @@ I built this app with a privacy-first mindset. It does not collect, store, or tr
 ### The Story
 The project started back in 2025 out of pure frustration. The official Messenger Desktop app at the time was notoriously buggy and consumed far too much memory. When Meta finally discontinued it in December 2025, I needed a reliable way to stay connected without keeping a heavy browser tab open all day.
 
-With the shutdown of `messenger.com` in April 2026, the stakes got higher. I updated the app to bridge the gap: it uses the `facebook.com/messages` backend but surgically removes the "Facebook noise." No Reels, no Marketplace, and no Feed - just your conversations in a dedicated, isolated window.
+With the shutdown of `messenger.com` in April 2026, the stakes got higher. I updated the app to bridge the gap: it uses the `facebook.com/messages` backend but surgically removes the "Facebook noise". No Reels, no Marketplace, and no Feed - just your conversations in a dedicated, isolated window.
 
 ### Why use this instead of a browser?
 It is all about focus and footprint. By using the system's native WebView through Tauri, the app installer stays incredibly small (~5MB) compared to the 100MB+ installers of Electron-based alternatives. 

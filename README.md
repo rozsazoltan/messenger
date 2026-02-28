@@ -31,11 +31,11 @@ It behaves like a real desktop app: external links open in your default browser 
 
 ### Comparison
 
-| Feature | Unofficial Messenger Desktop (Tauri) | Official (Legacy) | Caprine (Electron) |
+| Feature | Unofficial Messenger Desktop (Tauri) | Official Messenger Desktop (Legacy) | Caprine (Electron) |
 | :--- | :--- | :--- | :--- |
 | **Installer Size** | ~5 MB | ~100+ MB | ~100 MB |
 | **Base Technology** | System WebView | Electron | Electron |
-| **Interface Focus** | Isolated Chat | Facebook | Custom Features |
+| **Interface Focus** | Isolated Chat | Isolated Chat | Custom Features |
 | **Status** | ✅ Active | ❌ Discontinued | ✅ Active |
 
 ### Download

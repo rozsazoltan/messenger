@@ -24,6 +24,9 @@ The project started back in 2025 out of pure frustration. The official Messenger
 
 With the shutdown of `messenger.com` in April 2026, the stakes got higher. I updated the app to bridge the gap: it uses the `facebook.com/messages` backend but surgically removes the "Facebook noise". No Reels, no Marketplace, and no Feed - just your conversations in a dedicated, isolated window.
 
+### Why is it called `messenger-next`?
+The project has always used the name `messenger-next` for its executables. The idea behind it is simple: after the end of `messenger.com` and the discontinuation of the official Messenger Desktop app, this project serves as a continuation of that experience. It aims to preserve the familiar, dedicated Messenger workflow in a standalone desktop app - without the extra Facebook noise around it.
+
 ### Why use this instead of a browser?
 It is all about focus and footprint. By using the system's native WebView through Tauri, the app installer stays incredibly small (~5MB) compared to the 100MB+ installers of Electron-based alternatives. 
 

@@ -54,5 +54,13 @@ The interface is optimized to eliminate distractions. Upon startup, the app hide
 • **Automated Updates**  
 To maintain compatibility with Facebook's frequent UI and technical changes, the app features a built-in update system. When a new version is released to address these changes, you will receive a notification within the app. Updates are delivered from verified, signed GitHub releases and can be installed with a single click.
 
+### Small but Useful Extras
+
+• **Enhanced Image Zoom**  
+Double-click an enlarged image to enter zoom mode. Once active, use the mouse wheel to zoom in or out, pan across zoomed areas by clicking and dragging or by using the arrow keys, and double-click to return to the original size. This makes it much easier to inspect photos without resizing the app window - something Facebook Messenger itself does not normally support.
+
+• **Copy Image from the Right-Click Menu**  
+The app adds a **Copy Image** option to the context menu, allowing images shown in Messenger to be copied directly to the clipboard. It works across different kinds of displayed images, not just standard image attachments.
+
 ---
 **Maintained by:** [rozsazoltan](https://stackoverflow.com/users/15167500/rozsazoltan)

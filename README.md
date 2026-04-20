@@ -1,7 +1,7 @@
 # Messenger Desktop for Windows, Mac & Linux
 
 [![Latest release](https://img.shields.io/github/v/release/rozsazoltan/messenger?label=messenger-next)](https://github.com/rozsazoltan/messenger/releases/latest)
-[![downloads](https://img.shields.io/github/downloads/rozsazoltan/messenger/latest/total?label=downloads)](https://github.com/rozsazoltan/messenger/releases/latest)
+[![downloads](https://img.shields.io/github/downloads/rozsazoltan/messenger/total?label=downloads)](https://github.com/rozsazoltan/messenger/releases/latest)
 [![release-date](https://img.shields.io/github/release-date/rozsazoltan/messenger?label=release-date)](https://github.com/rozsazoltan/messenger/releases/latest)
 
 This is a lightweight desktop application for Facebook Messenger, serving as a standalone replacement for the official Meta desktop client that was discontinued in late 2025. 

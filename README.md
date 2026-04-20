@@ -8,6 +8,14 @@ This is a lightweight desktop application for Facebook Messenger, serving as a s
 
 The application architecture ensures privacy by acting as a transparent wrapper; it does not collect, store, or intercept any data. It simply provides a native window for the official Facebook infrastructure, meaning all communication and message handling remain strictly between your computer and Facebook's servers, exactly as they would in a standard web browser.
 
+- [Download](#download)
+- [Features](#features)
+- [Privacy and Security](#privacy-and-security)
+- [Requirements](#requirements)
+- [Comparison](#comparison)
+
+## Download
+
 <table>
   <thead>
     <tr>

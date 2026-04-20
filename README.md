@@ -8,7 +8,54 @@ This is a lightweight desktop application for Facebook Messenger, serving as a s
 
 The application architecture ensures privacy by acting as a transparent wrapper; it does not collect, store, or intercept any data. It simply provides a native window for the official Facebook infrastructure, meaning all communication and message handling remain strictly between your computer and Facebook's servers, exactly as they would in a standard web browser.
 
-👉 [Download Latest Release](https://github.com/rozsazoltan/messenger/releases/latest)
+<table>
+  <thead>
+    <tr>
+      <th align="center">Platform</th>
+      <th align="center">Installer</th>
+      <th align="center">Portable</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">
+        <img src="https://img.shields.io/badge/Windows-0078D4?style=flat&logo=windows&logoColor=white" alt="Windows" />
+      </td>
+      <td align="center">
+        <a href="https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.msi">
+          <img src="https://img.shields.io/badge/.msi-Download-0078D4?style=flat-square&logo=windows&logoColor=white" alt="Download .msi" />
+        </a>
+      </td>
+      <td align="center">—</td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="https://img.shields.io/badge/macOS-000000?style=flat&logo=apple&logoColor=white" alt="macOS" />
+      </td>
+      <td align="center">
+        <a href="https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.dmg">
+          <img src="https://img.shields.io/badge/.dmg-Download-000000?style=flat-square&logo=apple&logoColor=white" alt="Download .dmg" />
+        </a>
+      </td>
+      <td align="center">—</td>
+    </tr>
+    <tr>
+      <td align="center">
+        <img src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black" alt="Linux" />
+      </td>
+      <td align="center">
+        <a href="https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.deb">
+          <img src="https://img.shields.io/badge/.deb-Download-FCC624?style=flat-square&logo=debian&logoColor=black" alt="Download .deb" />
+        </a>
+      </td>
+      <td align="center">
+        <a href="https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.AppImage">
+          <img src="https://img.shields.io/badge/.AppImage-Download-FCC624?style=flat-square&logo=linux&logoColor=black" alt="Download .AppImage" />
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 ## Why this project exists
 The project started as a personal replacement for the old Messenger Desktop app, which had become increasingly heavy and unreliable.
@@ -105,7 +152,7 @@ This project is an unofficial, non-commercial application and is not affiliated 
 
 Messenger and the Messenger logo are trademarks of Meta Platforms, Inc. They are used solely for identification purposes to describe the service this application provides access to. No ownership or official association with Meta Platforms, Inc. is claimed or implied.
 
-This application acts as a transparent wrapper around the official Facebook Messenger web interface and does not modify, intercept, or store any communication. All data is transmitted directly between the user and Facebook’s servers.
+This application acts as a transparent wrapper around the official Facebook Messenger web interface and does not modify, intercept, or store any communication. All data is transmitted directly between the user and Facebook's servers.
 
 ---
 **Maintained by:** [rozsazoltan](https://stackoverflow.com/users/15167500/rozsazoltan)

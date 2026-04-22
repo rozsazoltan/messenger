@@ -17,8 +17,8 @@ An unofficial, lightweight desktop wrapper for Facebook Messenger — built with
 
 | | Windows | macOS | Linux |
 | :--- | :---: | :---: | :---: |
-| **Installer** *(recommended)* | [![.msi](https://img.shields.io/badge/.msi-0078D4?style=flat-square&logo=windows&logoColor=white)](https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.msi) | [![.dmg](https://img.shields.io/badge/.dmg-000000?style=flat-square&logo=apple&logoColor=white)](https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.dmg) | [![.deb](https://img.shields.io/badge/.deb-E95420?style=flat-square&logo=ubuntu&logoColor=white)](https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.deb) |
-| **Portable** | — | [![.app.tar.gz](https://img.shields.io/badge/.app.tar.gz-000000?style=flat-square&logo=apple&logoColor=white)](https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.app.tar.gz) | [![.AppImage](https://img.shields.io/badge/.AppImage-FCC624?style=flat-square&logo=linux&logoColor=black)](https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.AppImage) |
+| **Installer** *(recommended)* | [Download](https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.msi) | [Download](https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.dmg) | [Download](https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.deb) |
+| **Portable** | — | [Download](https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.app.tar.gz) | [Download](https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.AppImage) |
 
 ## The Story
 

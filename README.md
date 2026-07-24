@@ -1,3 +1,9 @@
+> [!NOTE]
+>
+> Version 1.9 arrives in August with one of biggest updates yet. Expect configurable notifications, badge support, optional Insider builds for early feature access, better download handling, improved window management, and even lower CPU and RAM usage.
+>
+> Mission stays unchanged: deliver free, fast, distraction-free Facebook Messenger desktop experience without ads, payments, or telemetry. [Download current version](https://github.com/rozsazoltan/messenger#download) now to receive automatic update notifications and install version 1.9 with one click when released. Excited for update? [Star repository on GitHub](https://github.com/rozsazoltan/messenger) and read full preview in [Discussion #27](https://github.com/rozsazoltan/messenger/discussions/27).
+
 # Messenger Desktop for Windows, macOS & Linux
 
 [![Latest release](https://img.shields.io/github/v/release/rozsazoltan/messenger?label=messenger-next)](https://github.com/rozsazoltan/messenger/releases/latest)

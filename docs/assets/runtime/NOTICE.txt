@@ -1,0 +1,6 @@
+GSAP 3.15.0 with ScrollTrigger and SplitText 3.15.0
+Copyright 2008-2026 GreenSock. All rights reserved.
+
+These files are locally vendored from the gsap npm package for the public
+documentation site. They are provided under GreenSock's Standard "no charge"
+license: https://gsap.com/standard-license/

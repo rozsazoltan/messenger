@@ -1,0 +1,274 @@
+<!doctype html>
+<html class="system" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Technical overview of Messenger Next: Tauri 2, Rust, the system WebView, desktop integration, updates, and contribution paths."
+    />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="canonical" href="https://messengernext.vercel.app/developers" />
+    <meta property="og:title" content="Messenger Next for Developers" />
+    <meta
+      property="og:description"
+      content="How Messenger Next combines Tauri 2, Rust, and the system WebView into a lightweight Messenger Desktop."
+    />
+    <meta property="og:type" content="article" />
+    <meta
+      property="og:url"
+      content="https://messengernext.vercel.app/developers"
+    />
+    <title>For Developers | Messenger Next Architecture</title>
+    <link rel="icon" href="../assets/messenger.png" type="image/png" />
+    <link rel="stylesheet" href="../tokens.css" />
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../seo-pages.css" />
+    <script src="../app.js" defer></script>
+  </head>
+  <body class="seo-page-body">
+    <a class="skip-link" href="#content">Skip to content</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="../" aria-label="Messenger Next home">
+          <img src="../assets/messenger.png" alt="" width="36" height="36" />
+          <span>Messenger Next</span>
+        </a>
+        <div class="header-actions">
+          <nav class="header-nav" aria-label="Site navigation">
+            <a href="/#guide">Guide</a>
+            <a href="/changelog">Changelog</a>
+            <a href="/faq">FAQ</a>
+            <a href="/privacy">Privacy</a>
+            <a href="/developers">Developers</a>
+            <a href="/team">Team</a>
+            <a href="https://github.com/rozsazoltan/messenger/discussions"
+              >Community</a
+            >
+          </nav>
+          <div class="theme-switch" role="group" aria-label="Appearance">
+            <button
+              class="theme-option"
+              type="button"
+              data-theme="system"
+              aria-label="Use system appearance"
+              title="System appearance"
+            >
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="13" rx="2" />
+                <path d="M8 21h8M12 17v4" />
+              </svg>
+            </button>
+            <button
+              class="theme-option"
+              type="button"
+              data-theme="light"
+              aria-label="Use light appearance"
+              title="Light appearance"
+            >
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="4" />
+                <path
+                  d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+                />
+              </svg>
+            </button>
+            <button
+              class="theme-option"
+              type="button"
+              data-theme="dark"
+              aria-label="Use dark appearance"
+              title="Dark appearance"
+            >
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M20.3 15.4A9 9 0 0 1 8.6 3.7 9 9 0 1 0 20.3 15.4Z" />
+              </svg>
+            </button>
+          </div>
+          <button
+            class="menu-button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-navigation"
+            aria-label="Open navigation"
+            title="Open navigation"
+          >
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path class="menu-icon-open" d="M4 6h16M4 12h16M4 18h16" />
+              <path class="menu-icon-close" d="M6 6l12 12M18 6 6 18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main class="seo-main" id="content">
+      <article class="seo-article">
+        <header class="seo-hero">
+          <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="../">Messenger Next</a><span>/</span
+            ><span>Developers</span>
+          </nav>
+          <h1>A small desktop shell with native responsibilities.</h1>
+          <p class="lead">
+            Messenger Next keeps web rendering in the operating system's WebView
+            and moves desktop integration, file handling, updater behavior, and
+            window control into a Tauri 2 application backed by Rust.
+          </p>
+        </header>
+
+        <section class="technical-facts" aria-label="Technical architecture">
+          <section>
+            <h2>Tauri 2</h2>
+            <p>
+              The application shell uses Tauri 2 instead of bundling an Electron
+              runtime. This keeps the installer compact and uses native platform
+              capabilities for windows, notifications, menus, and updates.
+            </p>
+          </section>
+          <section>
+            <h2>Rust</h2>
+            <p>
+              Native commands and desktop boundaries are implemented in Rust,
+              with explicit handling for downloads, platform permissions,
+              updater operations, and window lifecycle behavior.
+            </p>
+          </section>
+          <section>
+            <h2>System WebView</h2>
+            <p>
+              Messenger renders through the WebView already provided by Windows,
+              macOS, or Linux. The app does not ship a second full browser
+              engine in every installer.
+            </p>
+          </section>
+          <section>
+            <h2>Typed integration</h2>
+            <p>
+              The Messenger-specific desktop UI is organized as typed modules
+              that bridge browser events to constrained Tauri commands instead
+              of relying on one monolithic injected script.
+            </p>
+          </section>
+        </section>
+
+        <section class="seo-section">
+          <h2>Release and update model</h2>
+          <p>
+            Stable and preview channels share one release catalog, with update
+            checks deduplicated and cached to avoid unnecessary GitHub API use.
+            The desktop updater verifies release metadata before installation,
+            while rollback support provides a recovery route when a release is
+            unsuitable for a particular system.
+          </p>
+        </section>
+
+        <section
+          class="seo-section faq-page-list technical-faq"
+          aria-labelledby="distribution"
+        >
+          <h2 id="distribution">Distribution and source</h2>
+          <details>
+            <summary>Why is there only one macOS download?</summary>
+            <div>
+              <p>
+                The DMG contains a <strong>universal application</strong> for
+                both Apple silicon and Intel Macs. A single artifact avoids
+                architecture choices and update mismatches while preserving the
+                same installation path across supported Mac hardware.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>Why does Windows use an MSI installer?</summary>
+            <div>
+              <p>
+                MSI provides predictable installation, updating, and removal
+                through the standard Windows Installer service. It also works
+                well in managed Windows environments. The package uses the
+                system WebView2 runtime instead of bundling a browser engine, so
+                its small size is not the result of removing Messenger features.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>Where is the source code?</summary>
+            <div>
+              <p>
+                The Messenger Next application is currently closed source.
+                Releases, documentation, Discussions, issue reporting, and
+                project history remain public. The reasoning and possible future
+                direction are documented in
+                <a href="https://github.com/rozsazoltan/messenger/issues/1"
+                  >issue #1</a
+                >.
+              </p>
+            </div>
+          </details>
+        </section>
+
+        <section class="seo-section">
+          <h2>What is public today</h2>
+          <p>
+            Messenger Next itself is currently closed source. Release artifacts,
+            documentation, Discussions, issue reporting, and the public project
+            history remain available in the Messenger repository. The
+            source-code decision is documented in
+            <a href="https://github.com/rozsazoltan/messenger/issues/1"
+              >issue #1</a
+            >.
+          </p>
+          <p>
+            Developers can still contribute high-quality bug reports, platform
+            reproduction steps, release feedback, documentation corrections, and
+            security observations without access to the internal application
+            code.
+          </p>
+          <div class="seo-actions">
+            <a
+              class="button button-primary"
+              href="https://github.com/rozsazoltan/messenger/discussions"
+              >Join Discussions</a
+            >
+            <a
+              class="button button-secondary"
+              href="https://github.com/rozsazoltan/messenger/issues"
+              >Browse Issues</a
+            >
+          </div>
+        </section>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <a class="footer-brand" href="/" aria-label="Messenger Next home">
+          <img src="../assets/messenger.png" alt="" width="40" height="40" />
+          <span>
+            <strong>Messenger Next</strong>
+            <small>Messenger Desktop, without the noise.</small>
+          </span>
+        </a>
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="/#download">Download</a>
+          <a href="/changelog">Changelog</a>
+          <a href="/privacy">Privacy</a>
+          <a href="https://github.com/rozsazoltan/messenger/releases"
+            >Releases</a
+          >
+        </nav>
+        <div class="footer-meta">
+          <p>
+            Developed and maintained by the
+            <a href="/team">Messenger Next team</a>.
+          </p>
+          <p>
+            Independent from Meta. Facebook and Messenger are trademarks of Meta
+            Platforms, Inc.
+          </p>
+          <a href="https://github.com/rozsazoltan/messenger/blob/master/LICENSE"
+            >License</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

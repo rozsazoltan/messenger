@@ -1,0 +1,88 @@
+/* Hallmark · genre: modern-minimal · macrostructure: Workbench · theme: Cobalt · enrichment: code-native product demo */
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+  --layout-gutter: clamp(18px, 3.2vw, 44px);
+  --layout-content: 1352px;
+  --section-space: clamp(80px, 9vw, 132px);
+  --section-space-compact: clamp(56px, 6vw, 88px);
+  --marketing-blue: #0866ff;
+  --marketing-blue-deep: #0054d7;
+  --marketing-blue-soft: #dfeeff;
+  --button-bubble-radius: 18px 18px 5px 18px;
+  --product-canvas: #ffffff;
+  --product-surface: #f5f6f7;
+  --product-surface-raised: #e9ebee;
+  --product-surface-active: #e4e6eb;
+  --product-line: rgb(20 24 31 / 12%);
+  --product-border: rgb(20 24 31 / 22%);
+  --product-ink: #16181c;
+  --product-copy: #4b4f56;
+  --product-muted: #747980;
+  --product-blue: #0866ff;
+  --product-notification: rgb(255 255 255 / 92%);
+  --product-notification-border: rgb(20 24 31 / 14%);
+  --product-shadow: 0 34px 80px rgb(20 37 59 / 18%);
+  --release-insider: #b88905;
+  --release-plan: #c95a22;
+  --release-stable: #16864a;
+  --dur-instant: 100ms;
+  --dur-short: 180ms;
+  --dur-medium: 280ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --z-base: 0;
+  --z-raised: 2;
+  --z-sticky: 10;
+  --z-overlay: 20;
+}
+
+html.dark {
+  --product-canvas: #111214;
+  --product-surface: #18191c;
+  --product-surface-raised: #24262a;
+  --product-surface-active: #34363b;
+  --product-line: rgb(255 255 255 / 10%);
+  --product-border: rgb(255 255 255 / 20%);
+  --product-ink: #f5f6f7;
+  --product-copy: #c4c8ce;
+  --product-muted: #9298a1;
+  --product-notification: rgb(38 40 45 / 90%);
+  --product-notification-border: rgb(255 255 255 / 14%);
+  --product-shadow: 0 34px 80px rgb(0 0 0 / 34%);
+  --release-insider: #e6bd31;
+  --release-plan: #f18d59;
+  --release-stable: #52bd7c;
+}
+
+@media (prefers-color-scheme: dark) {
+  html.system {
+    --product-canvas: #111214;
+    --product-surface: #18191c;
+    --product-surface-raised: #24262a;
+    --product-surface-active: #34363b;
+    --product-line: rgb(255 255 255 / 10%);
+    --product-border: rgb(255 255 255 / 20%);
+    --product-ink: #f5f6f7;
+    --product-copy: #c4c8ce;
+    --product-muted: #9298a1;
+    --product-notification: rgb(38 40 45 / 90%);
+    --product-notification-border: rgb(255 255 255 / 14%);
+    --product-shadow: 0 34px 80px rgb(0 0 0 / 34%);
+    --release-insider: #e6bd31;
+    --release-plan: #f18d59;
+    --release-stable: #52bd7c;
+  }
+}

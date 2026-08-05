@@ -1,0 +1,1340 @@
+<!doctype html>
+<html class="system" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Install, update, and use Messenger Next, a focused Messenger Desktop for Windows, macOS, and Linux."
+    />
+    <link rel="canonical" href="https://messengernext.vercel.app/" />
+    <meta property="og:title" content="Messenger Next | Messenger Desktop" />
+    <meta
+      property="og:description"
+      content="A lightweight, distraction-free Messenger Desktop for Windows, macOS, and Linux."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://messengernext.vercel.app/" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Messenger Next | Messenger Desktop</title>
+    <link rel="icon" href="./assets/messenger.png" type="image/png" />
+    <link
+      rel="preload"
+      href="./assets/messenger-next-avatars.webp"
+      as="image"
+      type="image/webp"
+    />
+    <script src="./boot.js"></script>
+    <link rel="stylesheet" href="./tokens.css" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./marketing.css" />
+    <script src="./assets/runtime/gsap.min.js" defer></script>
+    <script src="./assets/runtime/scroll-trigger.min.js" defer></script>
+    <script src="./assets/runtime/split-text.min.js" defer></script>
+    <script src="./app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to content</a>
+
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="#home" aria-label="Messenger Next home">
+          <img src="./assets/messenger.png" alt="" width="36" height="36" />
+          <span>Messenger Next</span>
+        </a>
+        <div class="header-actions">
+          <nav class="header-nav" aria-label="Site navigation">
+            <a href="/#guide">Guide</a>
+            <a href="/changelog">Changelog</a>
+            <a href="/faq">FAQ</a>
+            <a href="/privacy">Privacy</a>
+            <a href="/developers">Developers</a>
+            <a href="/team">Team</a>
+            <a href="https://github.com/rozsazoltan/messenger/discussions"
+              >Community</a
+            >
+          </nav>
+          <div class="theme-switch" role="group" aria-label="Appearance">
+            <button
+              class="theme-option"
+              type="button"
+              data-theme="system"
+              aria-label="Use system appearance"
+              title="System appearance"
+            >
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <rect x="3" y="4" width="18" height="13" rx="2" />
+                <path d="M8 21h8M12 17v4" />
+              </svg>
+            </button>
+            <button
+              class="theme-option"
+              type="button"
+              data-theme="light"
+              aria-label="Use light appearance"
+              title="Light appearance"
+            >
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="4" />
+                <path
+                  d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+                />
+              </svg>
+            </button>
+            <button
+              class="theme-option"
+              type="button"
+              data-theme="dark"
+              aria-label="Use dark appearance"
+              title="Dark appearance"
+            >
+              <svg aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M20.3 15.4A9 9 0 0 1 8.6 3.7 9 9 0 1 0 20.3 15.4Z" />
+              </svg>
+            </button>
+          </div>
+          <button
+            class="menu-button"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobile-navigation"
+            aria-label="Open navigation"
+            title="Open navigation"
+          >
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path class="menu-icon-open" d="M4 6h16M4 12h16M4 18h16" />
+              <path class="menu-icon-close" d="M6 6l12 12M18 6 6 18" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="content">
+      <section class="landing" id="home" data-marketing-landing>
+        <div class="landing-hero" data-product-runway>
+          <div class="landing-copy" data-hero-copy>
+            <h1 data-split-title>
+              <span class="landing-title-primary" data-hero-title-line
+                >Messenger Desktop</span
+              >
+              <span class="landing-title-secondary" data-hero-title-line
+                >Made for every desktop.</span
+              >
+            </h1>
+            <p class="landing-tagline">
+              <em>Messenger Next for distraction-free, focused messaging.</em>
+            </p>
+            <p class="landing-lead">
+              An unofficial, lightweight desktop wrapper for Facebook Messenger.
+              No feed, no reels, no marketplace. Just your conversations in a
+              dedicated window.
+            </p>
+            <div class="landing-actions" data-hero-actions>
+              <a
+                class="button button-primary"
+                data-magnetic
+                href="https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.msi"
+                ><svg
+                  class="download-icon"
+                  aria-hidden="true"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 3v11m0 0 4-4m-4 4-4-4M5 17.5v2h14v-2" />
+                </svg>
+                <span>Download for Windows</span></a
+              >
+            </div>
+          </div>
+
+          <div class="landing-media" data-hero-window data-product-frame>
+            <div
+              class="product-window"
+              aria-label="Messenger Next conversation example"
+            >
+              <div class="product-titlebar">
+                <span class="product-title">
+                  <img
+                    src="./assets/messenger.png"
+                    alt=""
+                    width="14"
+                    height="14"
+                  />
+                  <span>messenger-next</span>
+                </span>
+                <span class="window-controls" aria-hidden="true">
+                  <i></i><i></i><i></i>
+                </span>
+              </div>
+              <div class="product-layout">
+                <aside class="demo-conversations" aria-label="Conversations">
+                  <header class="demo-conversations-header">
+                    <strong>Chats</strong>
+                    <span class="demo-conversation-actions" aria-hidden="true">
+                      <span>
+                        <svg viewBox="0 0 24 24">
+                          <circle cx="5" cy="12" r="1.5" />
+                          <circle cx="12" cy="12" r="1.5" />
+                          <circle cx="19" cy="12" r="1.5" />
+                        </svg>
+                      </span>
+                      <span>
+                        <svg viewBox="0 0 24 24">
+                          <path d="M12 20H5a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1h7" />
+                          <path
+                            d="m14 5 5 5M13 11l6.5-6.5a1.4 1.4 0 0 1 2 2L15 13l-4 1Z"
+                          />
+                        </svg>
+                      </span>
+                    </span>
+                  </header>
+                  <div class="demo-search" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <circle cx="11" cy="11" r="7" />
+                      <path d="m20 20-4-4" />
+                    </svg>
+                    <span>Search Messenger</span>
+                  </div>
+                  <div class="demo-tabs" aria-hidden="true">
+                    <strong>All</strong><span>Unread</span><span>Groups</span
+                    ><span>...</span>
+                  </div>
+                  <div class="demo-contact is-active">
+                    <span
+                      class="demo-avatar avatar-one active-avatar"
+                      data-active-avatar
+                    ></span>
+                    <span>
+                      <strong>Nora Ellis</strong>
+                      <small class="nora-preview">
+                        <span data-nora-initial>Still on for tonight?</span>
+                        <span data-nora-response
+                          >You: Absolutely. Just messages, no noise.</span
+                        >
+                        <span data-nora-latest>Perfect. See you at seven.</span>
+                      </small>
+                    </span>
+                    <time class="nora-time">
+                      <span data-nora-time-initial>2m</span>
+                      <span data-nora-time-response>1m</span>
+                      <span data-nora-time-latest>now</span>
+                    </time>
+                  </div>
+                  <div class="demo-contact" data-theo-contact>
+                    <span
+                      class="demo-avatar avatar-two active-avatar online-avatar"
+                    ></span>
+                    <span>
+                      <strong>Theo Reed</strong>
+                      <small class="theo-preview">
+                        <span data-theo-before>See you tomorrow.</span>
+                        <span data-theo-after>What's up?</span>
+                      </small>
+                    </span>
+                    <time>2m</time>
+                  </div>
+                  <div class="demo-contact">
+                    <span class="demo-avatar avatar-three"></span>
+                    <span
+                      ><strong>Mina Park</strong
+                      ><small>Coffee tomorrow?</small></span
+                    >
+                    <time>18m</time>
+                  </div>
+                  <div class="demo-contact">
+                    <span class="demo-avatar avatar-four"></span>
+                    <span
+                      ><strong>Luca Martin</strong
+                      ><small>Absolutely</small></span
+                    >
+                    <time>1h</time>
+                  </div>
+                  <div class="demo-contact demo-contact-muted">
+                    <span class="demo-avatar avatar-two"></span>
+                    <span
+                      ><strong>Friday plans</strong
+                      ><small>Jamie: Got it</small></span
+                    >
+                    <time>3h</time>
+                  </div>
+                </aside>
+                <section
+                  class="demo-chat"
+                  aria-label="Conversation with Nora Ellis"
+                >
+                  <header class="demo-chat-header">
+                    <span
+                      class="demo-avatar avatar-one active-avatar"
+                      data-active-avatar
+                    ></span>
+                    <span>
+                      <strong>Nora Ellis</strong>
+                      <small class="active-status">
+                        <span data-status-before>Active 8m ago</span>
+                        <span data-status-after>Active now</span>
+                      </small>
+                    </span>
+                    <span class="demo-chat-actions" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"
+                        />
+                      </svg>
+                      <svg viewBox="0 0 24 24">
+                        <path
+                          d="m23 7-7 5 7 5ZM14 5H3a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2Z"
+                        />
+                      </svg>
+                      <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" />
+                        <path d="M12 16v-4M12 8h.01" />
+                      </svg>
+                    </span>
+                  </header>
+                  <div class="demo-messages">
+                    <div
+                      class="demo-message-history"
+                      aria-label="Earlier messages with Nora Ellis"
+                    >
+                      <small class="demo-message-time">
+                        Yesterday at 8:14 PM
+                      </small>
+                      <p class="demo-message incoming">
+                        The photos finally arrived.
+                      </p>
+                      <p class="demo-message outgoing">
+                        Which one is your favorite?
+                      </p>
+                      <p class="demo-message incoming">
+                        The rooftop one. Definitely.
+                      </p>
+                      <p class="demo-message outgoing">
+                        Same. Keeping that one.
+                      </p>
+                    </div>
+                    <small class="demo-message-time">Today at 6:42 PM</small>
+                    <p class="demo-message incoming" data-current-prompt>
+                      Still on for tonight?
+                    </p>
+                    <div
+                      class="demo-message-row demo-message-row-outgoing"
+                      data-outgoing-row
+                    >
+                      <p class="demo-message outgoing" data-current-response>
+                        Absolutely. Just messages, no noise.
+                      </p>
+                    </div>
+                    <div class="demo-message-stage" data-incoming-stage>
+                      <p class="demo-typing" aria-label="Nora is typing">
+                        <i></i><i></i><i></i>
+                      </p>
+                      <p class="demo-message incoming demo-message-late">
+                        Perfect. See you at seven.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="demo-composer" aria-hidden="true">
+                    <span class="demo-composer-input">
+                      <span>Aa</span>
+                      <svg class="demo-composer-smile" viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="9" />
+                        <path d="M8.5 14.5c1 1.4 2.1 2 3.5 2s2.5-.6 3.5-2" />
+                        <path d="M9 9.5h.01M15 9.5h.01" />
+                      </svg>
+                    </span>
+                    <svg class="demo-composer-like" viewBox="0 0 24 24">
+                      <path
+                        d="M7 10v11H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2Zm0 11h9.7a2 2 0 0 0 1.9-1.4l2.2-7A2 2 0 0 0 18.9 10H14l.7-3.4A3 3 0 0 0 11.8 3L7 10Z"
+                      />
+                    </svg>
+                  </div>
+                </section>
+              </div>
+              <div class="demo-notifications" aria-hidden="true">
+                <div class="demo-notification notification-one">
+                  <span class="demo-avatar avatar-two"></span>
+                  <p><strong>Theo Reed</strong><span>What's up?</span></p>
+                  <time>now</time>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-focus" data-focus-overlay>
+            <h2 data-split-title>Nothing between you and the conversation.</h2>
+            <p>
+              Messenger Next keeps the people you came to reach in view while
+              the surrounding Facebook noise stays out of the way.
+            </p>
+          </div>
+
+          <div class="hero-scroll-cue" data-scroll-cue aria-hidden="true">
+            <span>Scroll to focus</span>
+            <i></i>
+          </div>
+        </div>
+
+        <div
+          class="landing-rail release-status"
+          aria-label="Messenger Next release status"
+          aria-live="polite"
+          data-release-status
+        >
+          <article
+            class="release-metric release-metric-downloads"
+            data-release-card
+          >
+            <span class="release-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3v11m0 0 4-4m-4 4-4-4M5 17.5v2h14v-2" />
+              </svg>
+            </span>
+            <span class="release-copy">
+              <span>Total downloads</span>
+              <strong data-release-downloads>Checking...</strong>
+              <small>Across published releases</small>
+            </span>
+            <a
+              class="release-action"
+              href="https://github.com/rozsazoltan/messenger/releases"
+              >View releases</a
+            >
+          </article>
+          <article
+            class="release-metric release-metric-stable"
+            data-release-card
+          >
+            <span class="release-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="m12 2 2.4 2 3.1-.2.7 3 2.6 1.7-1.2 2.9 1.2 2.9-2.6 1.7-.7 3-3.1-.2-2.4 2-2.4-2-3.1.2-.7-3-2.6-1.7 1.2-2.9-1.2-2.9 2.6-1.7.7-3 3.1.2Z"
+                />
+                <path d="m8.5 12 2.2 2.2 4.8-4.8" />
+              </svg>
+            </span>
+            <span class="release-copy">
+              <span>Latest stable</span>
+              <strong data-release-stable>Checking...</strong>
+              <small>For everyday use</small>
+            </span>
+            <a
+              class="release-action external-link"
+              data-release-stable-link
+              hidden
+              rel="noreferrer"
+              target="_blank"
+            >
+              <svg class="download-icon" aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M12 3v11m0 0 4-4m-4 4-4-4M5 17.5v2h14v-2" />
+              </svg>
+              <span>Download stable</span>
+            </a>
+          </article>
+          <article
+            class="release-metric release-metric-preview"
+            data-release-card
+          >
+            <span class="release-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M9 3h6M10 3v5l-5 9a2 2 0 0 0 1.8 3h10.4a2 2 0 0 0 1.8-3l-5-9V3"
+                />
+                <path d="M8 15h8" />
+              </svg>
+            </span>
+            <span class="release-copy">
+              <span>Insider preview</span>
+              <strong data-release-prerelease>Checking...</strong>
+              <small data-release-prerelease-note
+                >Looking for an active build</small
+              >
+            </span>
+            <a
+              class="release-action external-link"
+              data-release-prerelease-link
+              hidden
+              rel="noreferrer"
+              target="_blank"
+            >
+              <svg class="download-icon" aria-hidden="true" viewBox="0 0 24 24">
+                <path d="M12 3v11m0 0 4-4m-4 4-4-4M5 17.5v2h14v-2" />
+              </svg>
+              <span>Download preview</span>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <div class="marketing-flow">
+        <section class="noise-story" data-noise-story>
+          <div class="noise-story-copy">
+            <h2 data-split-title>
+              <span>More conversation.</span>
+              <span>Less noise.</span>
+            </h2>
+            <p>
+              Messages move through. Feed, Reels, Marketplace, and the rest of
+              the surrounding clutter stop at the door.
+            </p>
+          </div>
+          <div
+            class="noise-filter"
+            aria-label="Messenger Next filters distractions"
+          >
+            <div class="noise-source" aria-hidden="true">
+              <span>
+                <img src="./assets/facebook.svg" alt="" />
+              </span>
+              <small>Facebook</small>
+            </div>
+            <svg
+              class="noise-routes"
+              aria-hidden="true"
+              viewBox="0 0 640 420"
+              preserveAspectRatio="none"
+            >
+              <path data-noise-route d="M54 46C176 40 213 156 338 202" />
+              <path data-noise-route d="M30 150C168 144 217 186 338 210" />
+              <path data-noise-route d="M52 276C184 284 225 233 338 216" />
+              <path data-noise-route d="M108 378C206 334 253 266 338 224" />
+              <path data-output-route d="M358 216C455 214 500 190 606 167" />
+            </svg>
+            <svg
+              class="noise-routes noise-routes-mobile"
+              aria-hidden="true"
+              viewBox="0 0 320 780"
+              preserveAspectRatio="none"
+            >
+              <path data-noise-route-mobile d="M76 74C76 190 132 252 160 344" />
+              <path
+                data-noise-route-mobile
+                d="M126 52C126 184 148 266 160 344"
+              />
+              <path
+                data-noise-route-mobile
+                d="M160 32C160 170 160 270 160 344"
+              />
+              <path
+                data-noise-route-mobile
+                d="M206 58C208 190 178 272 160 344"
+              />
+              <path
+                data-noise-route-mobile
+                d="M260 88C258 204 198 270 160 344"
+              />
+              <path
+                data-output-route-mobile
+                d="M160 438C160 530 160 624 160 742"
+              />
+            </svg>
+            <div class="noise-input" aria-hidden="true">
+              <span
+                class="noise-chip noise-chip-message"
+                data-noise-item="message"
+              >
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9.8 9.8 0 0 1-3.7-.8L3 21l1.7-4.7A8.5 8.5 0 1 1 21 11.5Z"
+                  />
+                </svg>
+                Messages
+              </span>
+              <span class="noise-chip" data-noise-item="feed">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 5h16v14H4zM8 9h8M8 13h5" />
+                </svg>
+                Feed
+              </span>
+              <span class="noise-chip" data-noise-item="reels">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3" y="4" width="18" height="16" rx="2" />
+                  <path d="m10 9 5 3-5 3Z" />
+                </svg>
+                Reels
+              </span>
+              <span class="noise-chip" data-noise-item="marketplace">
+                <svg viewBox="0 0 24 24">
+                  <path d="M3 9h18l-2-5H5ZM5 9v11h14V9M9 20v-6h6v6" />
+                </svg>
+                Marketplace
+              </span>
+              <span class="noise-chip" data-noise-item="recommendations">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="m12 3 2.1 5.2L20 9l-4.5 3.8 1.4 5.7-4.9-3-4.9 3 1.4-5.7L4 9l5.9-.8Z"
+                  />
+                </svg>
+                Recommendations
+              </span>
+              <span class="noise-chip" data-noise-item="ads">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 5h16v14H4zM8 9h8M8 13h5" />
+                  <path d="M17 16h.01" />
+                </svg>
+                Ads
+              </span>
+              <span class="noise-chip" data-noise-item="notifications">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"
+                  />
+                </svg>
+                Social notifications
+              </span>
+              <span class="noise-chip" data-noise-item="other">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="5" cy="12" r="1" />
+                  <circle cx="12" cy="12" r="1" />
+                  <circle cx="19" cy="12" r="1" />
+                </svg>
+                Other noise
+              </span>
+            </div>
+            <div class="noise-gate" data-noise-gate>
+              <span class="noise-gate-orbit" aria-hidden="true"></span>
+              <span class="noise-gate-ring" aria-hidden="true"></span>
+              <img src="./assets/messenger.png" alt="" width="54" height="54" />
+              <strong>Messenger Next</strong>
+              <small>Conversations continue</small>
+            </div>
+            <div class="noise-output" aria-hidden="true">
+              <p data-noise-output>
+                <span class="demo-avatar avatar-three"></span>
+                <span><strong>Mina</strong>Coffee after work?</span>
+              </p>
+              <p data-noise-output>
+                <span class="demo-avatar avatar-one"></span>
+                <span><strong>Nora</strong>See you at seven.</span>
+              </p>
+            </div>
+            <div class="noise-recipient" aria-hidden="true">
+              <span class="demo-avatar avatar-four"></span>
+              <strong>You</strong>
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="focus-story"
+          aria-labelledby="focus-heading"
+          data-focus-story
+        >
+          <div class="focus-copy">
+            <h2 id="focus-heading">
+              <span>Open Messenger. Reach your people.</span>
+              <span>Leave the rest outside.</span>
+            </h2>
+            <p>
+              The goal is deliberately narrow: provide a fast, current desktop
+              home for the Messenger conversations that matter, without turning
+              the wrapper into another feature-heavy social client.
+            </p>
+          </div>
+          <div class="focus-list">
+            <article>
+              <strong>No Feed</strong>
+              <p>
+                Start with your chats instead of a timeline engineered to keep
+                you scrolling. The window opens where the conversation is.
+              </p>
+            </article>
+            <article>
+              <strong>No Reels</strong>
+              <p>
+                Short-form video never competes with the person you came to
+                reach. Your attention stays on friends, family, and colleagues.
+              </p>
+            </article>
+            <article>
+              <strong>No Marketplace</strong>
+              <p>
+                Buying, selling, recommendations, and unrelated Facebook
+                surfaces stay outside this dedicated messaging space.
+              </p>
+            </article>
+            <article>
+              <strong>No Ads</strong>
+              <p>
+                Messenger Next adds no advertising, promoted placement, or paid
+                interruption around the Messenger interface.
+              </p>
+            </article>
+            <article>
+              <strong>No Telemetry</strong>
+              <p>
+                The desktop wrapper adds no developer-controlled analytics for
+                messages, credentials, or app usage.
+              </p>
+            </article>
+            <article>
+              <strong>No Detours</strong>
+              <p>
+                Recommendations and unrelated social surfaces do not become
+                another reason to stay in the app after the conversation ends.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="landing-download" aria-labelledby="download-heading">
+          <div class="landing-download-inner">
+            <div class="landing-section-heading">
+              <h2 id="download-heading" data-split-title>
+                Choose your desktop.
+              </h2>
+              <p>
+                Direct stable installers for each platform. Preview and
+                alternative packages remain available from GitHub Releases.
+              </p>
+            </div>
+            <div class="landing-platforms" aria-label="Direct stable downloads">
+              <a
+                data-download-card
+                data-magnetic
+                href="https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.msi"
+              >
+                <span
+                  class="platform-icon platform-icon-windows"
+                  aria-hidden="true"
+                ></span>
+                <span>Windows</span>
+                <small>64-bit MSI</small>
+                <strong>
+                  <svg
+                    class="download-icon"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 3v11m0 0 4-4m-4 4-4-4M5 17.5v2h14v-2" />
+                  </svg>
+                  <span>Download MSI</span>
+                </strong>
+              </a>
+              <a
+                data-download-card
+                data-magnetic
+                href="https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.dmg"
+              >
+                <span
+                  class="platform-icon platform-icon-apple"
+                  aria-hidden="true"
+                ></span>
+                <span>macOS</span>
+                <small>Universal DMG</small>
+                <strong>
+                  <svg
+                    class="download-icon"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 3v11m0 0 4-4m-4 4-4-4M5 17.5v2h14v-2" />
+                  </svg>
+                  <span>Download DMG</span>
+                </strong>
+              </a>
+              <a data-download-card data-magnetic href="#linux-install">
+                <span
+                  class="platform-icon platform-icon-linux"
+                  aria-hidden="true"
+                ></span>
+                <span>Linux</span>
+                <small>DEB, RPM, Arch, AppImage</small>
+                <strong>Choose a package</strong>
+              </a>
+            </div>
+            <div class="download-alternatives">
+              <p>
+                Windows and Linux installers are available now. Homebrew,
+                WinGet, and Microsoft Store support are coming soon.
+              </p>
+              <nav aria-label="Alternative installation methods">
+                <a href="#windows-install">Windows options</a>
+                <a href="#linux-install">Linux packages</a>
+              </nav>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="guide-boundary" data-guide-boundary aria-hidden="true"></div>
+
+      <section
+        class="guide-intro"
+        id="guide"
+        aria-labelledby="guide-heading"
+        data-guide-transition
+      >
+        <div>
+          <h2 id="guide-heading" data-split-title>
+            Everything else, documented.
+          </h2>
+          <p>
+            Public GitHub hosts release artifacts, documentation, Discussions,
+            and Issues. The Messenger Next application itself remains closed
+            source.
+          </p>
+        </div>
+        <div class="guide-scroll-cue" aria-hidden="true">
+          <span></span><span></span>
+        </div>
+      </section>
+
+      <div class="page-shell">
+        <aside class="sidebar" id="guide-nav">
+          <nav class="guide-nav" aria-label="Guide navigation">
+            <p class="nav-label">Start here</p>
+            <a class="active" href="#overview">Overview</a>
+            <a href="#download">Download and install</a>
+            <a href="#updates">Updates and releases</a>
+
+            <p class="nav-label">Using the app</p>
+            <a href="#controls">Keyboard controls</a>
+            <a href="#settings">Settings</a>
+            <a href="#notifications">Notifications</a>
+            <a href="#downloads">Downloads</a>
+
+            <p class="nav-label">Trust and help</p>
+            <a href="#privacy">Privacy and security</a>
+            <a href="#faq">Questions</a>
+            <a href="#developers">For developers</a>
+            <a href="#support">Support</a>
+          </nav>
+
+          <div class="sidebar-note">
+            <span class="note-label">Current channel</span>
+            <strong>Stable releases</strong>
+            <a href="https://github.com/rozsazoltan/messenger/releases"
+              >Browse all releases</a
+            >
+          </div>
+        </aside>
+
+        <article class="guide-content">
+          <section class="intro" id="overview">
+            <p class="eyebrow">
+              Messenger Desktop for Windows, macOS and Linux
+            </p>
+            <div class="intro-heading">
+              <div>
+                <h2>A focused place for your conversations.</h2>
+                <p class="lead">
+                  <code>Messenger Next</code> opens Facebook Messenger in a
+                  dedicated native window, without Feed, Reels, Marketplace, or
+                  wrapper-added distractions.
+                </p>
+              </div>
+              <img
+                class="hero-icon"
+                src="./assets/messenger.png"
+                alt="Messenger Next app icon"
+                width="112"
+                height="112"
+              />
+            </div>
+            <div
+              class="overview-points"
+              aria-label="What Messenger Next provides"
+            >
+              <div>
+                <span>01</span>
+                <p>
+                  Uses the system WebView instead of carrying a full browser
+                  engine.
+                </p>
+              </div>
+              <div>
+                <span>02</span>
+                <p>
+                  Stays small, responsive, and separate from the rest of
+                  Facebook.
+                </p>
+              </div>
+              <div>
+                <span>03</span>
+                <p>
+                  Provides signed update artifacts for supported desktop
+                  platforms.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="download">
+            <div class="section-heading">
+              <p class="eyebrow">Get started</p>
+              <h2>Download and install</h2>
+              <p>
+                Choose your platform. Stable downloads are direct; preview and
+                portable builds remain on GitHub Releases.
+              </p>
+            </div>
+
+            <div class="platform-grid">
+              <section class="platform-card">
+                <p class="platform-name">Windows</p>
+                <p class="platform-format">64-bit MSI</p>
+                <p>
+                  Use the standard Windows installer. It supports reliable
+                  installation, updates, and removal.
+                </p>
+                <a
+                  class="button button-primary"
+                  href="https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.msi"
+                  >Download MSI</a
+                >
+              </section>
+              <section class="platform-card">
+                <p class="platform-name">macOS</p>
+                <p class="platform-format">Universal DMG</p>
+                <p>One download works on both Apple silicon and Intel Macs.</p>
+                <a
+                  class="button button-primary"
+                  href="https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.dmg"
+                  >Download DMG</a
+                >
+              </section>
+              <section class="platform-card">
+                <p class="platform-name">Linux</p>
+                <p class="platform-format">Native packages</p>
+                <p>
+                  Install a DEB, RPM, Arch package, or portable AppImage through
+                  one verified script.
+                </p>
+                <a class="button button-primary" href="#linux-install"
+                  >Install on Linux</a
+                >
+              </section>
+            </div>
+
+            <div class="platform-details">
+              <section id="windows-install">
+                <h3>Windows</h3>
+                <ol>
+                  <li>Download and open the MSI installer.</li>
+                  <li>Follow the Windows installer steps.</li>
+                  <li>Use <kbd>F2</kbd> in the app to check for updates.</li>
+                </ol>
+                <p class="quiet">
+                  The package uses Microsoft WebView2 from Windows rather than
+                  embedding another browser. WinGet and Microsoft Store
+                  distribution are planned but are not available yet; use the
+                  MSI download above in the meantime.
+                </p>
+              </section>
+              <section id="macos-install">
+                <h3>macOS</h3>
+                <ol>
+                  <li>Open the downloaded DMG.</li>
+                  <li>
+                    Drag <code>messenger-next.app</code> to
+                    <code>Applications</code>.
+                  </li>
+                  <li>Open it from Finder or Spotlight.</li>
+                </ol>
+                <p class="quiet">
+                  The app is not notarized by Apple yet. Use Finder's Open
+                  command after reviewing the release when macOS asks for
+                  confirmation.
+                </p>
+              </section>
+            </div>
+
+            <p class="callout">
+              <strong>Coming soon:</strong> a custom Homebrew Cask for macOS.
+              Until it is published, install the universal DMG from the release
+              page.
+            </p>
+
+            <section class="linux-install" id="linux-install">
+              <div class="section-heading compact-heading">
+                <p class="eyebrow">Linux</p>
+                <h3>Use the native package when possible</h3>
+              </div>
+              <div
+                class="distribution-table"
+                role="table"
+                aria-label="Supported Linux distributions"
+              >
+                <div class="table-row table-head" role="row">
+                  <span role="columnheader">Distribution</span>
+                  <span role="columnheader">Package</span>
+                  <span role="columnheader">Supported releases</span>
+                </div>
+                <div class="table-row" role="row">
+                  <span role="cell">Ubuntu</span><span role="cell">DEB</span
+                  ><span role="cell">24.04 and newer</span>
+                </div>
+                <div class="table-row" role="row">
+                  <span role="cell">Debian</span><span role="cell">DEB</span
+                  ><span role="cell">13 and newer</span>
+                </div>
+                <div class="table-row" role="row">
+                  <span role="cell">Fedora / openSUSE</span
+                  ><span role="cell">RPM</span
+                  ><span role="cell">Current supported releases</span>
+                </div>
+                <div class="table-row" role="row">
+                  <span role="cell">Arch Linux</span
+                  ><span role="cell">PKG.TAR.ZST</span
+                  ><span role="cell">Rolling</span>
+                </div>
+                <div class="table-row" role="row">
+                  <span role="cell">Other modern distributions</span
+                  ><span role="cell">AppImage</span
+                  ><span role="cell">Current releases</span>
+                </div>
+              </div>
+              <section class="command-block">
+                <div>
+                  <p class="command-label">Verified installer script</p>
+                  <code
+                    >curl --proto '=https' --tlsv1.2 --fail --location
+                    https://raw.githubusercontent.com/rozsazoltan/messenger/master/scripts/install-linux.sh
+                    | sh</code
+                  >
+                </div>
+                <button
+                  class="copy-button"
+                  type="button"
+                  data-copy="curl --proto '=https' --tlsv1.2 --fail --location https://raw.githubusercontent.com/rozsazoltan/messenger/master/scripts/install-linux.sh | sh"
+                >
+                  Copy
+                </button>
+              </section>
+              <p class="quiet">
+                Read the
+                <a
+                  href="https://github.com/rozsazoltan/messenger/blob/master/scripts/install-linux.sh"
+                  >installer script</a
+                >
+                before running it. Force the portable route by appending
+                <code> -s -- appimage</code>.
+              </p>
+            </section>
+          </section>
+
+          <section id="updates">
+            <div class="section-heading">
+              <p class="eyebrow">Release channel</p>
+              <h2>Updates without noise</h2>
+              <p>
+                Stable releases are the default. The updater checks the signed
+                release metadata and lets you choose when to install.
+              </p>
+            </div>
+            <div class="split-list">
+              <section>
+                <h3>Stable</h3>
+                <p>
+                  The recommended channel for everyday use. Open the update
+                  panel with <kbd>F2</kbd> to check for the latest stable
+                  version.
+                </p>
+              </section>
+              <section>
+                <h3>Preview builds</h3>
+                <p>
+                  Enable this option only when you are comfortable testing
+                  changes and sharing useful feedback in Discussions or Issues.
+                </p>
+              </section>
+            </div>
+            <p class="callout">
+              A release can be checked manually from the app, so updates never
+              interrupt an active conversation unexpectedly.
+            </p>
+          </section>
+
+          <section id="controls">
+            <div class="section-heading">
+              <p class="eyebrow">Everyday controls</p>
+              <h2>Keyboard controls</h2>
+              <p>
+                Use the built-in panels for common desktop actions without
+                opening a browser menu.
+              </p>
+            </div>
+            <div class="shortcut-grid">
+              <div>
+                <span class="shortcut-keys"><kbd>F1</kbd></span>
+                <span class="shortcut-label">Open About</span>
+              </div>
+              <div>
+                <span class="shortcut-keys"><kbd>F2</kbd></span>
+                <span class="shortcut-label">Check updates</span>
+              </div>
+              <div>
+                <span class="shortcut-keys"><kbd>F3</kbd></span>
+                <span class="shortcut-label">Open settings</span>
+              </div>
+              <div>
+                <span class="shortcut-keys"
+                  ><kbd>Ctrl</kbd><b>+</b><kbd>J</kbd></span
+                >
+                <span class="shortcut-label">Open downloads</span>
+              </div>
+              <div>
+                <span class="shortcut-keys"><kbd>F5</kbd></span>
+                <span class="shortcut-label">Reload Messenger</span>
+              </div>
+              <div>
+                <span class="shortcut-keys"
+                  ><kbd>Ctrl</kbd><b>+</b><kbd>R</kbd></span
+                >
+                <span class="shortcut-label">Reload Messenger</span>
+              </div>
+            </div>
+          </section>
+
+          <section id="settings">
+            <div class="section-heading">
+              <p class="eyebrow">Preferences</p>
+              <h2>Settings</h2>
+              <p>
+                Open Settings with <kbd>F3</kbd> to adapt the window to how you
+                work.
+              </p>
+            </div>
+            <ul class="feature-list">
+              <li>Always on Top</li>
+              <li>System tray support and start-to-tray</li>
+              <li>Start on system startup</li>
+              <li>Hide on close</li>
+              <li>Experimental multiple instances</li>
+              <li>
+                Native alerts, badge-only notifications, and preview privacy
+                controls
+              </li>
+            </ul>
+          </section>
+
+          <section id="notifications">
+            <div class="section-heading">
+              <p class="eyebrow">Messages</p>
+              <h2>Choose how messages reach you</h2>
+              <p>
+                Messenger Next asks once, before it enables any message
+                alerting. Open Settings with <kbd>F3</kbd> at any time to change
+                the choice.
+              </p>
+            </div>
+            <div class="split-list">
+              <section>
+                <h3>Badge only</h3>
+                <p>
+                  Keep incoming messages quiet. An unread count or dot appears
+                  on the app and tray icons without a desktop notification.
+                </p>
+              </section>
+              <section>
+                <h3>Native alerts</h3>
+                <p>
+                  Receive your operating system's notification banner for new
+                  messages. Notification details can be hidden when the screen
+                  should stay private.
+                </p>
+              </section>
+            </div>
+            <p class="callout">
+              Messenger mute settings are respected by default. You can keep
+              muted chats out of both badges and alerts, include them in the
+              badge only, or explicitly override the mute rule for this PC.
+            </p>
+          </section>
+
+          <section id="downloads">
+            <div class="section-heading">
+              <p class="eyebrow">Files</p>
+              <h2>Downloads</h2>
+              <p>
+                <kbd>Ctrl</kbd> + <kbd>J</kbd> opens the recent downloads list.
+                Select a file to open it; hold <kbd>Ctrl</kbd> while selecting
+                to reveal it in the file manager.
+              </p>
+            </div>
+            <p class="callout">
+              The list is a convenience record, not a second file store. Missing
+              and expired entries are cleaned up automatically.
+            </p>
+          </section>
+
+          <section id="privacy">
+            <div class="section-heading">
+              <p class="eyebrow">Your account</p>
+              <h2>Privacy and security</h2>
+              <p>
+                <code>Messenger Next</code> is a native window around the
+                official Messenger interface. It does not collect, analyze,
+                sell, or store messages, credentials, or usage data.
+              </p>
+              <p>
+                <a href="/privacy">Read the full privacy and trust guide</a>
+              </p>
+            </div>
+            <div class="split-list">
+              <section>
+                <h3>Where conversations go</h3>
+                <p>
+                  Messages and account data stay between your computer and
+                  Meta's services under Meta's terms and privacy policy.
+                </p>
+              </section>
+              <section>
+                <h3>What this app changes</h3>
+                <p>
+                  It removes unrelated Facebook chrome around the Messenger
+                  experience. It does not replace, bypass, or impersonate Meta
+                  services.
+                </p>
+              </section>
+            </div>
+          </section>
+
+          <section id="faq">
+            <div class="section-heading">
+              <p class="eyebrow">Answers</p>
+              <h2>Frequently asked questions</h2>
+            </div>
+            <div class="faq-list">
+              <details open>
+                <summary>Is Messenger Next really free?</summary>
+                <p>
+                  Completely.
+                  <strong
+                    >There is no purchase price, subscription, advertising, or
+                    paid tier.</strong
+                  >
+                  It was built by one developer who missed a focused,
+                  Messenger-only desktop experience.
+                </p>
+                <p>
+                  <strong>Developer's promise:</strong> the core Messenger Next
+                  desktop app will remain free to download and use. Access to
+                  conversations will not be placed behind a subscription, and
+                  advertising will not be added to the app.
+                </p>
+              </details>
+              <details>
+                <summary>Do I need a new account?</summary>
+                <p>
+                  No. Messenger Next works with
+                  <strong>the Facebook account you already use</strong> in
+                  Messenger on your phone and on the web.
+                </p>
+              </details>
+              <details>
+                <summary>
+                  Is this an official Facebook or Meta application?
+                </summary>
+                <p>
+                  No. Messenger Next is
+                  <strong>independent and has no affiliation with Meta</strong>.
+                  It loads Meta's own Messenger interface from
+                  <code>facebook.com/messages</code>, and sign-in happens on
+                  that service instead of through a developer-controlled login
+                  form.
+                </p>
+              </details>
+              <details>
+                <summary>Is it safe to use?</summary>
+                <p>
+                  Messenger Next <strong>adds no telemetry of its own</strong>
+                  and does not collect messages, credentials, or usage
+                  analytics. Sign-in happens through Meta's Messenger interface,
+                  not through a developer-controlled login form.
+                </p>
+                <p>
+                  Messenger remains a Meta service governed by Meta's terms and
+                  privacy policy. Read the
+                  <a href="/privacy">privacy and trust guide</a> for the
+                  complete boundary.
+                </p>
+              </details>
+            </div>
+            <p class="section-link">
+              <a href="/faq">Read every frequently asked question</a>
+            </p>
+          </section>
+
+          <section id="developers">
+            <div class="section-heading">
+              <p class="eyebrow">Under the hood</p>
+              <h2>Are you a developer?</h2>
+              <p>
+                Messenger Next is built with Tauri 2 and Rust, uses the
+                operating system's WebView, and layers a typed desktop
+                integration over the Messenger web interface.
+              </p>
+            </div>
+            <p class="callout">
+              Explore the architecture, updater model, performance choices, and
+              public contribution surfaces in the
+              <a href="/developers">developer guide</a>.
+            </p>
+          </section>
+
+          <section id="support" class="support-section">
+            <div class="section-heading">
+              <p class="eyebrow">Need a hand?</p>
+              <h2>Support and feedback</h2>
+              <p>
+                Useful feedback makes the focused experience better for
+                everyone.
+              </p>
+            </div>
+            <div class="support-actions">
+              <a
+                class="button button-primary"
+                href="https://github.com/rozsazoltan/messenger/discussions"
+                >Start a discussion</a
+              >
+              <a
+                class="button button-secondary"
+                href="https://github.com/rozsazoltan/messenger/issues"
+                >Report an issue</a
+              >
+              <a
+                class="button button-secondary"
+                href="https://github.com/rozsazoltan/messenger"
+                >Star on GitHub</a
+              >
+            </div>
+          </section>
+        </article>
+      </div>
+      <footer class="site-footer">
+        <div class="site-footer-inner">
+          <a class="footer-brand" href="/" aria-label="Messenger Next home">
+            <img src="./assets/messenger.png" alt="" width="40" height="40" />
+            <span>
+              <strong>Messenger Next</strong>
+              <small>Messenger Desktop, without the noise.</small>
+            </span>
+          </a>
+          <nav class="footer-links" aria-label="Footer navigation">
+            <a href="/#download">Download</a>
+            <a href="/changelog">Changelog</a>
+            <a href="/privacy">Privacy</a>
+            <a href="https://github.com/rozsazoltan/messenger/releases"
+              >Releases</a
+            >
+          </nav>
+          <div class="footer-meta">
+            <p>
+              Developed and maintained by the
+              <a href="/team">Messenger Next team</a>.
+            </p>
+            <p>
+              Independent from Meta. Facebook and Messenger are trademarks of
+              Meta Platforms, Inc.
+            </p>
+            <a
+              href="https://github.com/rozsazoltan/messenger/blob/master/LICENSE"
+              >License</a
+            >
+          </div>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>

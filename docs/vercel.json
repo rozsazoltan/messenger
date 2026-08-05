@@ -1,0 +1,29 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/faq", "destination": "/faq/index" },
+    { "source": "/developers", "destination": "/developers/index" },
+    { "source": "/privacy", "destination": "/privacy/index" },
+    { "source": "/team", "destination": "/team/index" }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; connect-src 'self' https://api.github.com; img-src 'self' https://github.com https://avatars.githubusercontent.com; script-src 'self'; style-src 'self'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    }
+  ]
+}

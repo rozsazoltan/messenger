@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://messengernext.vercel.app/</loc>
+    <loc>https://messengerdesktop.vercel.app/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://messengernext.vercel.app/faq</loc>
+    <loc>https://messengerdesktop.vercel.app/faq</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://messengernext.vercel.app/changelog</loc>
+    <loc>https://messengerdesktop.vercel.app/changelog</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://messengernext.vercel.app/privacy</loc>
+    <loc>https://messengerdesktop.vercel.app/privacy</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://messengernext.vercel.app/developers</loc>
+    <loc>https://messengerdesktop.vercel.app/developers</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://messengernext.vercel.app/team</loc>
+    <loc>https://messengerdesktop.vercel.app/team</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

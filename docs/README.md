@@ -22,4 +22,4 @@ In the public `rozsazoltan/messenger` repository, create a Vercel project with
 `docs` as its Root Directory. Use the `Other` framework preset and leave the
 build command and output directory empty. Vercel serves `index.html` directly.
 
-The intended production domain is [messengernext.vercel.app](https://messengernext.vercel.app).
+The intended production domain is [messengerdesktop.vercel.app](https://messengerdesktop.vercel.app).

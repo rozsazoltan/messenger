@@ -46,7 +46,7 @@ in a dedicated window.
 <p align="center">
   <a href="https://github.com/rozsazoltan/messenger/releases">Browse every release, prerelease, and portable download</a>
   &nbsp;·&nbsp;
-  <a href="https://messengernext.vercel.app"><code>messengernext.vercel.app</code> guide</a>
+  <a href="https://messengerdesktop.vercel.app"><code>messengerdesktop.vercel.app</code> guide</a>
 </p>
 
 Choose the installer for your platform above. Stable releases are linked
@@ -139,7 +139,7 @@ maintains verifiable public profiles on
 [X](https://x.com/rozsazoltan_dev), and
 [LinkedIn](https://www.linkedin.com/in/rozsazoltan/).
 
-Read the complete [privacy and trust guide](https://messengernext.vercel.app/privacy/).
+Read the complete [privacy and trust guide](https://messengerdesktop.vercel.app/privacy/).
 
 ### Do voice and video calls work?
 
@@ -293,8 +293,8 @@ official interface while removing distracting elements; it does not see or
 modify conversations.
 
 The project documents the boundary between its wrapper and Meta's service in
-the [privacy and trust guide](https://messengernext.vercel.app/privacy/). A
-separate [developer guide](https://messengernext.vercel.app/developers/)
+the [privacy and trust guide](https://messengerdesktop.vercel.app/privacy/). A
+separate [developer guide](https://messengerdesktop.vercel.app/developers/)
 describes the Tauri 2, Rust, and system WebView architecture.
 
 ## Requirements

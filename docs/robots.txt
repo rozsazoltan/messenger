@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://messengernext.vercel.app/sitemap.xml
+Sitemap: https://messengerdesktop.vercel.app/sitemap.xml

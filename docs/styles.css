@@ -1,3 +1,4 @@
+/* Hallmark · pre-emit critique: P5 H5 E4 S5 R4 V5 · contrast: pass (40-41) · slop: pass (42-45) · honest: pass (46) · chrome: pass (47) · tokens: pass (48) · responsive: static pass (49) · icons: pass (30) · mobile: static pass (34, 49-57) */
 :root {
   color-scheme: light;
   --accent: #126de5;
@@ -1820,24 +1821,19 @@ h3 {
   border: 1px solid var(--line);
   border-radius: 6px;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   overflow: hidden;
 }
 
 .shortcut-grid > div {
   align-items: center;
   display: grid;
-  gap: 14px;
-  grid-template-columns: 108px minmax(0, 1fr);
-  min-height: 56px;
-  padding: 11px 15px;
+  gap: 20px;
+  grid-template-columns: minmax(210px, max-content) minmax(0, 1fr);
+  min-height: 62px;
+  padding: 13px 18px;
 }
 
-.shortcut-grid > div:nth-child(2n) {
-  border-left: 1px solid var(--line);
-}
-
-.shortcut-grid > div:nth-child(n + 3) {
+.shortcut-grid > div + div {
   border-top: 1px solid var(--line);
 }
 
@@ -1846,10 +1842,10 @@ h3 {
   color: inherit;
   display: flex;
   font-size: inherit;
+  flex-wrap: wrap;
   gap: 5px;
   margin-left: 0;
-  min-width: 0;
-  white-space: nowrap;
+  min-width: 210px;
 }
 
 .shortcut-grid .shortcut-label {
@@ -2555,10 +2551,6 @@ h3 {
     padding-left: 0;
   }
 
-  .shortcut-grid > div:nth-child(2n) {
-    border-left: 0;
-  }
-
   .overview-points > div + div,
   .overview-points > div {
     border-top: 1px solid var(--line);
@@ -2570,15 +2562,16 @@ h3 {
     padding-top: 20px;
   }
 
-  .shortcut-grid > div:nth-child(n + 2) {
-    border-top: 1px solid var(--line);
+  .shortcut-grid > div {
+    align-items: start;
+    gap: 8px;
+    grid-template-columns: minmax(0, 1fr);
+    min-height: 0;
+    padding: 14px;
   }
 
-  .shortcut-grid > div {
-    gap: 12px;
-    grid-template-columns: 84px minmax(0, 1fr);
-    min-height: 52px;
-    padding: 10px 12px;
+  .shortcut-grid .shortcut-keys {
+    min-width: 0;
   }
 
   .guide-content > section:not(.intro) {
@@ -2613,4 +2606,215 @@ h3 {
   .brand span {
     display: none;
   }
+}
+
+/* Hallmark � genre: modern-minimal � macrostructure: Component Playground � theme: Cobalt � enrichment: none � scope: installation workbench */
+.install-workbench {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.install-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--space-2);
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: var(--space-6);
+}
+
+.install-card:hover {
+  border-color: var(--accent-muted);
+}
+
+.install-card-heading {
+  align-items: start;
+  display: flex;
+  gap: var(--space-3);
+  justify-content: space-between;
+}
+
+.install-card-status {
+  background: color-mix(in srgb, var(--accent) 9%, var(--panel));
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, var(--line));
+  border-radius: 999px;
+  color: var(--accent-muted);
+  font-size: 0.68rem;
+  font-weight: 750;
+  line-height: 1.25;
+  margin: 0;
+  padding: var(--space-1) var(--space-2);
+  text-align: right;
+}
+
+.install-card .platform-format {
+  margin-top: var(--space-2);
+}
+
+.install-card-copy {
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin: 0 0 var(--space-5);
+}
+
+.install-command {
+  align-items: center;
+  background: var(--panel-raised);
+  border: 1px solid var(--line);
+  border-radius: var(--space-2);
+  display: flex;
+  gap: var(--space-3);
+  justify-content: space-between;
+  margin-top: auto;
+  min-width: 0;
+  padding: var(--space-3);
+}
+
+.install-command > div {
+  min-width: 0;
+}
+
+.install-command code {
+  background: transparent;
+  border: 0;
+  color: var(--ink);
+  display: block;
+  font-size: 0.75rem;
+  overflow-wrap: anywhere;
+  padding: 0;
+}
+
+.install-fallback,
+.install-note {
+  color: var(--accent-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin: var(--space-3) 0 0;
+}
+
+.install-fallback {
+  text-decoration: none;
+}
+
+.install-fallback:hover {
+  color: var(--accent-strong);
+  text-decoration: underline;
+}
+
+.linux-release-channels {
+  border-top: 1px solid var(--line);
+  margin-top: var(--space-8);
+  padding-top: var(--space-6);
+}
+
+.linux-release-heading {
+  align-items: end;
+  display: flex;
+  gap: var(--space-6);
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.linux-release-heading .eyebrow {
+  margin-bottom: var(--space-2);
+}
+
+.linux-release-heading h4 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.linux-release-heading > p {
+  color: var(--ink-soft);
+  font-size: 0.84rem;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 38ch;
+}
+
+.linux-channel-grid {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.linux-channel {
+  border-top: 1px solid var(--line);
+  min-width: 0;
+  padding-top: var(--space-3);
+}
+
+.linux-channel > p:not(.command-label) {
+  color: var(--ink-soft);
+  font-size: 0.82rem;
+  line-height: 1.45;
+  margin: 0 0 var(--space-3);
+}
+
+.linux-channel .install-command {
+  align-items: start;
+  margin: 0;
+}
+
+@media (max-width: 960px) {
+  .install-workbench,
+  .linux-channel-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .install-card {
+    min-height: 0;
+  }
+
+  .linux-release-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+}
+
+@media (max-width: 680px) {
+  .install-card {
+    padding: var(--space-5);
+  }
+
+  .install-card-heading {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .install-card-status {
+    text-align: left;
+  }
+
+  .install-command {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .install-command .copy-button {
+    width: 100%;
+  }
+}
+
+.download-handoff {
+  border-top: 1px solid var(--line);
+  max-width: 680px;
+  padding-top: var(--space-8);
+}
+
+.download-handoff h3 {
+  color: var(--ink-strong);
+  font-size: clamp(1.45rem, 3vw, 2.2rem);
+  line-height: 1.1;
+  margin: 0 0 var(--space-3);
+}
+
+.download-handoff > p:not(.eyebrow) {
+  color: var(--ink-soft);
+  line-height: 1.65;
+  margin-bottom: var(--space-5);
 }

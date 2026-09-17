@@ -2,10 +2,38 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/faq", "destination": "/faq/index" },
-    { "source": "/developers", "destination": "/developers/index" },
-    { "source": "/privacy", "destination": "/privacy/index" },
-    { "source": "/team", "destination": "/team/index" }
+    {
+      "source": "/faq",
+      "destination": "/faq/index"
+    },
+    {
+      "source": "/developers",
+      "destination": "/developers/index"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy/index"
+    },
+    {
+      "source": "/team",
+      "destination": "/team/index"
+    },
+    {
+      "source": "/download",
+      "destination": "/download/index"
+    },
+    {
+      "source": "/windows",
+      "destination": "/windows/index"
+    },
+    {
+      "source": "/macos",
+      "destination": "/macos/index"
+    },
+    {
+      "source": "/linux",
+      "destination": "/linux/index"
+    }
   ],
   "headers": [
     {

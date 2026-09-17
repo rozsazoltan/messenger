@@ -36,9 +36,9 @@ in a dedicated window.
       <sub>macOS installer (.dmg)</sub>
     </td>
     <td align="center">
-      <a href="https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.deb"><img src="./assets/download.svg" width="48" alt="Download for Linux"></a><br>
-      <a href="https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.deb">Download&nbsp;for&nbsp;Linux</a><br>
-      <sub>Debian and Ubuntu (.deb)</sub>
+      <a href="#linux"><img src="./assets/download.svg" width="48" alt="Install for Linux"></a><br>
+      <a href="#linux">Install&nbsp;for&nbsp;Linux</a><br>
+      <sub>Architecture-aware installer</sub>
     </td>
   </tr>
 </table>
@@ -50,9 +50,10 @@ in a dedicated window.
 </p>
 
 Choose the installer for your platform above. Stable releases are linked
-directly, while preview builds and portable archives remain available from the
-release page. The sections below explain the app's background, installation
-options, and day-to-day features.
+directly, while preview builds, exact release versions, and portable archives
+are available from the release page or the Linux installer commands below. The
+sections below explain the app's background, installation options, and day-to-day
+features.
 
 - [The Story](#the-story)
 - [Frequently Asked Questions](#frequently-asked-questions)
@@ -178,18 +179,40 @@ a browser engine, so it remains small without being a reduced-feature build.
 
 ### Windows
 
-Download and open the MSI installer above, then follow the installer steps. The
-app checks for updates from the `F2` panel.
+#### WinGet
 
-WinGet and Microsoft Store distribution are planned but are not available yet.
-Until those channels are ready, install the signed MSI from the release page.
+Install the stable channel from WinGet:
+
+```powershell
+winget install --id Rozsazoltan.MessengerNext --exact
+```
+
+WinGet publishes stable releases only. Preview builds remain available through
+GitHub Releases and the app's `F2` Updates panel.
+
+#### Direct download
+
+Download and open the MSI installer above, then follow the installer steps. The
+app checks for updates from the `F2` panel. Microsoft Store distribution is a
+separate future channel; until then, use WinGet or the signed MSI from GitHub
+Releases.
 
 ### macOS
 
 #### Homebrew
 
-A custom Homebrew Cask is planned but is not available yet. Download the DMG
-from the release page until the cask is published.
+The official cask ships with the next stable release. Then install the stable
+channel with:
+
+```sh
+brew install --cask rozsazoltan/tap/messenger-next
+
+# Upgrade an existing installation
+brew upgrade --cask messenger-next
+```
+
+Homebrew publishes stable releases only. Until the first cask is published,
+download the DMG from the release page.
 
 #### Direct download
 
@@ -200,10 +223,9 @@ Finder's `Open` command to continue when you trust the download.
 
 ### Linux
 
-The installer script downloads the latest stable release, verifies its
-`SHA256SUMS` entry, then selects the native package manager available on the
-system. Preview releases remain available from the
-[GitHub releases page](https://github.com/rozsazoltan/messenger/releases).
+The installer verifies each download against that release's `SHA256SUMS` entry,
+then selects the native package manager available on the system. By default it
+installs the latest stable release and keeps the app on the Stable update channel.
 
 | Distribution               | Supported releases         | Format      |
 | -------------------------- | -------------------------- | ----------- |
@@ -226,6 +248,30 @@ On another modern distribution, force the portable AppImage installation:
 curl --proto '=https' --tlsv1.2 --fail --location https://raw.githubusercontent.com/rozsazoltan/messenger/master/scripts/install-linux.sh | sh -s -- appimage
 ```
 
+To allow preview builds, install the newest semantic version from both stable and
+prerelease GitHub Releases. This sets the app's update channel to Prerelease, so
+future startup checks may offer stable or preview updates, whichever is newer.
+Return to Stable from the app's `F2` Updates panel when you no longer want
+preview updates.
+
+```shell
+curl --proto '=https' --tlsv1.2 --fail --location https://raw.githubusercontent.com/rozsazoltan/messenger/master/scripts/install-linux.sh | sh -s -- --prerelease
+```
+
+To install one exact public release, provide its tag (the leading `v` is optional):
+
+```shell
+curl --proto '=https' --tlsv1.2 --fail --location https://raw.githubusercontent.com/rozsazoltan/messenger/master/scripts/install-linux.sh | sh -s -- --release v1.9.0-3
+```
+
+Use `--stable` to make the default explicit. The `--prerelease` and `--release`
+modes require `python3` to parse GitHub's release metadata safely; the default
+stable path does not. For AppImage installs, the script also reports when `~/.local/bin` is not on `PATH`.
+
+The script never substitutes an `x86_64` package on ARM64:
+it selects `amd64`/`arm64` DEBs and
+`x86_64`/`aarch64` RPM, AppImage, and Arch assets according to the host.
+
 The script is served from the public repository's `master` branch and can be
 [reviewed before running](https://github.com/rozsazoltan/messenger/blob/master/scripts/install-linux.sh).
 
@@ -241,11 +287,24 @@ browser engine, the app stays small and efficient:
 <details>
   <summary>Keyboard shortcuts</summary>
 
-| Shortcut                                     | Action          |
-| -------------------------------------------- | --------------- |
-| <kbd>F2</kbd>                                | Check updates   |
-| <kbd>F3</kbd>                                | Open settings   |
-| <kbd>F5</kbd> / <kbd>Ctrl</kbd>+<kbd>R</kbd> | Reload the page |
+| Shortcut                                                     | Action                                               |
+| ------------------------------------------------------------ | ---------------------------------------------------- |
+| <kbd>F2</kbd>                                                | Check updates                                        |
+| <kbd>F3</kbd>                                                | Open settings                                        |
+| <kbd>F5</kbd> / <kbd>Ctrl</kbd>+<kbd>R</kbd>                 | Reload the page                                      |
+| <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>+</kbd>                  | Zoom in                                              |
+| <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>-</kbd>                  | Zoom out                                             |
+| <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>M</kbd> | Bring Messenger Next forward and focus message input |
+| <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>1</kbd>-<kbd>9</kbd>     | Switch to one of the first nine conversations        |
+| <kbd>Ctrl</kbd>+<kbd>Tab</kbd>                               | Switch to the next conversation                      |
+| <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd>              | Switch to the previous conversation                  |
+| <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>N</kbd>                  | Open a new Messenger Next window                     |
+| <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>K</kbd>                  | Search conversations                                 |
+| <kbd>Cmd</kbd>/<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>K</kbd> | Search messages in the selected conversation         |
+
+Press the message-search shortcut again to close the conversation panel.
+Conversation shortcuts use the current page structure and do not guess when
+multiple controls match.
 
 </details>
 

@@ -1,3 +1,4 @@
+/* Hallmark � pre-emit critique: P5 H5 E4 S5 R5 V5 � contrast: pass (40-41) � honest: pass (46) � chrome: pass (47) � tokens: pass (48) � responsive: static pass (49) � mobile: static pass (34, 49-57) */
 /* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V4 */
 /* Hallmark · changelog · modern-minimal · Release journal · Cobalt */
 
@@ -27,18 +28,19 @@
 }
 
 .seo-hero {
-  max-width: 900px;
+  max-width: none;
 }
 
 .seo-hero h1 {
   color: var(--ink-strong);
-  font-size: clamp(3rem, 7vw, 6.6rem);
+  font-size: clamp(2.7rem, 4.8vw, 4.8rem);
   font-weight: 760;
   letter-spacing: 0;
   line-height: 1.02;
   margin: 0;
   overflow: visible;
   padding-bottom: 0.12em;
+  text-wrap: pretty;
 }
 
 .seo-hero .lead {
@@ -92,7 +94,7 @@
   font-size: clamp(3.2rem, 5.5vw, 5.8rem);
   max-width: 860px;
   min-width: 0;
-  overflow-wrap: anywhere;
+  text-wrap: pretty;
 }
 
 .changelog-hero .lead,
@@ -481,6 +483,14 @@
   font-weight: 680;
 }
 
+.release-plan-overview-compact {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.release-plan-grid-compact {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .release-plan-grid {
   counter-reset: release-plan;
   display: grid;
@@ -682,7 +692,7 @@
 }
 
 .trust-promise {
-  background: var(--marketing-blue);
+  background: #0047b8;
   color: #fff;
   margin-inline: calc(var(--layout-gutter) * -1);
   max-width: none;
@@ -708,9 +718,9 @@
 }
 
 .trust-promise p {
-  color: rgb(255 255 255 / 96%);
-  font-size: 1.08rem;
-  line-height: 1.72;
+  color: #fff;
+  font-size: 1.125rem;
+  line-height: 1.78;
   margin: 0;
 }
 
@@ -1084,4 +1094,148 @@
   .release-route-step.is-current::after {
     animation: none;
   }
+}
+
+/* Hallmark � platform pages � modern-minimal � Component Playground � Cobalt */
+.platform-page {
+  max-width: 920px;
+}
+
+.platform-page .seo-hero {
+  max-width: none;
+}
+
+.platform-page .seo-hero h1 {
+  font-size: clamp(2.4rem, 4.4vw, 4.6rem);
+  min-width: 0;
+  overflow-wrap: anywhere;
+  text-wrap: pretty;
+}
+
+.platform-choice-list {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.platform-switcher {
+  align-items: center;
+  background: var(--panel-raised);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  display: flex;
+  gap: var(--space-1);
+  overflow-x: auto;
+  padding: var(--space-1);
+  scrollbar-width: none;
+}
+
+.platform-switcher::-webkit-scrollbar {
+  display: none;
+}
+
+.platform-switcher a {
+  border-radius: 999px;
+  color: var(--ink-soft);
+  flex: 1 0 auto;
+  font-size: 0.88rem;
+  font-weight: 740;
+  min-height: 36px;
+  padding: var(--space-2) var(--space-4);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.platform-switcher a:hover {
+  background: var(--soft);
+  color: var(--ink-strong);
+}
+
+.platform-switcher a:active {
+  background: var(--line);
+}
+
+.platform-switcher a[aria-current="page"] {
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  color: var(--ink-strong);
+}
+
+.platform-switcher a[aria-current="page"]:hover {
+  background: var(--panel);
+}
+.platform-choice {
+  border-radius: var(--space-2);
+  color: var(--ink);
+  display: grid;
+  gap: var(--space-2);
+  padding: var(--space-5);
+  text-decoration: none;
+}
+
+.platform-choice:hover,
+.platform-choice:focus-visible {
+  background: var(--soft);
+}
+
+.platform-choice span {
+  color: var(--accent-muted);
+  font-family: SFMono-Regular, Consolas, monospace;
+  font-size: 0.74rem;
+  font-weight: 760;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.platform-choice strong {
+  color: var(--ink-strong);
+  font-size: clamp(1.25rem, 3vw, 1.7rem);
+  line-height: 1.15;
+}
+
+.platform-choice small {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.install-option {
+  border-top: 1px solid var(--line);
+  padding-top: var(--space-8);
+}
+
+.install-option h2,
+.platform-note h2 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1.1;
+  margin: 0 0 var(--space-3);
+}
+
+.install-option > p:not(.eyebrow),
+.platform-note p {
+  color: var(--ink-soft);
+  line-height: 1.7;
+  max-width: 68ch;
+}
+
+.install-option .command-block {
+  margin-top: var(--space-5);
+}
+
+.platform-note {
+  border-top: 1px solid var(--line);
+  padding-top: var(--space-8);
+}
+
+.platform-title-phrase {
+  white-space: nowrap;
+}
+@media (max-width: 680px) {
+  .platform-title-phrase {
+    white-space: normal;
+  }
+}
+
+.platform-app-name {
+  white-space: nowrap;
 }

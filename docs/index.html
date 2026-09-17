@@ -48,6 +48,7 @@
         </a>
         <div class="header-actions">
           <nav class="header-nav" aria-label="Site navigation">
+            <a href="/download">Download</a>
             <a href="/#guide">Guide</a>
             <a href="/changelog">Changelog</a>
             <a href="/faq">FAQ</a>
@@ -135,10 +136,7 @@
               dedicated window.
             </p>
             <div class="landing-actions" data-hero-actions>
-              <a
-                class="button button-primary"
-                data-magnetic
-                href="https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.msi"
+              <a class="button button-primary" data-magnetic href="/download"
                 ><svg
                   class="download-icon"
                   aria-hidden="true"
@@ -146,7 +144,7 @@
                 >
                   <path d="M12 3v11m0 0 4-4m-4 4-4-4M5 17.5v2h14v-2" />
                 </svg>
-                <span>Download for Windows</span></a
+                <span>Download Messenger Next</span></a
               >
             </div>
           </div>
@@ -687,22 +685,18 @@
                 Choose your desktop.
               </h2>
               <p>
-                Direct stable installers for each platform. Preview and
-                alternative packages remain available from GitHub Releases.
+                Choose your operating system for a focused installation guide,
+                direct download links, and package-manager commands.
               </p>
             </div>
             <div class="landing-platforms" aria-label="Direct stable downloads">
-              <a
-                data-download-card
-                data-magnetic
-                href="https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.msi"
-              >
+              <a data-download-card data-magnetic href="/windows">
                 <span
                   class="platform-icon platform-icon-windows"
                   aria-hidden="true"
                 ></span>
                 <span>Windows</span>
-                <small>64-bit MSI</small>
+                <small>64-bit MSI / WinGet</small>
                 <strong>
                   <svg
                     class="download-icon"
@@ -714,17 +708,13 @@
                   <span>Download MSI</span>
                 </strong>
               </a>
-              <a
-                data-download-card
-                data-magnetic
-                href="https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.dmg"
-              >
+              <a data-download-card data-magnetic href="/macos">
                 <span
                   class="platform-icon platform-icon-apple"
                   aria-hidden="true"
                 ></span>
                 <span>macOS</span>
-                <small>Universal DMG</small>
+                <small>Universal DMG / Homebrew</small>
                 <strong>
                   <svg
                     class="download-icon"
@@ -736,24 +726,26 @@
                   <span>Download DMG</span>
                 </strong>
               </a>
-              <a data-download-card data-magnetic href="#linux-install">
+              <a data-download-card data-magnetic href="/linux">
                 <span
                   class="platform-icon platform-icon-linux"
                   aria-hidden="true"
                 ></span>
                 <span>Linux</span>
-                <small>DEB, RPM, Arch, AppImage</small>
+                <small>DEB, RPM, Arch, AppImage / ARM64</small>
                 <strong>Choose a package</strong>
               </a>
             </div>
             <div class="download-alternatives">
               <p>
-                Windows and Linux installers are available now. Homebrew,
-                WinGet, and Microsoft Store support are coming soon.
+                Windows and Linux installers are available now. WinGet provides
+                stable Windows releases; the next macOS stable release publishes
+                the Homebrew Cask. Microsoft Store support is coming soon.
               </p>
               <nav aria-label="Alternative installation methods">
-                <a href="#windows-install">Windows options</a>
-                <a href="#linux-install">Linux packages</a>
+                <a href="/windows">Windows installation</a>
+                <a href="/macos">macOS installation</a>
+                <a href="/linux">Linux installation</a>
               </nav>
             </div>
           </div>
@@ -873,150 +865,19 @@
               </p>
             </div>
 
-            <div class="platform-grid">
-              <section class="platform-card">
-                <p class="platform-name">Windows</p>
-                <p class="platform-format">64-bit MSI</p>
-                <p>
-                  Use the standard Windows installer. It supports reliable
-                  installation, updates, and removal.
-                </p>
-                <a
-                  class="button button-primary"
-                  href="https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.msi"
-                  >Download MSI</a
-                >
-              </section>
-              <section class="platform-card">
-                <p class="platform-name">macOS</p>
-                <p class="platform-format">Universal DMG</p>
-                <p>One download works on both Apple silicon and Intel Macs.</p>
-                <a
-                  class="button button-primary"
-                  href="https://github.com/rozsazoltan/messenger/releases/latest/download/messenger-next.dmg"
-                  >Download DMG</a
-                >
-              </section>
-              <section class="platform-card">
-                <p class="platform-name">Linux</p>
-                <p class="platform-format">Native packages</p>
-                <p>
-                  Install a DEB, RPM, Arch package, or portable AppImage through
-                  one verified script.
-                </p>
-                <a class="button button-primary" href="#linux-install"
-                  >Install on Linux</a
-                >
-              </section>
-            </div>
-
-            <div class="platform-details">
-              <section id="windows-install">
-                <h3>Windows</h3>
-                <ol>
-                  <li>Download and open the MSI installer.</li>
-                  <li>Follow the Windows installer steps.</li>
-                  <li>Use <kbd>F2</kbd> in the app to check for updates.</li>
-                </ol>
-                <p class="quiet">
-                  The package uses Microsoft WebView2 from Windows rather than
-                  embedding another browser. WinGet and Microsoft Store
-                  distribution are planned but are not available yet; use the
-                  MSI download above in the meantime.
-                </p>
-              </section>
-              <section id="macos-install">
-                <h3>macOS</h3>
-                <ol>
-                  <li>Open the downloaded DMG.</li>
-                  <li>
-                    Drag <code>messenger-next.app</code> to
-                    <code>Applications</code>.
-                  </li>
-                  <li>Open it from Finder or Spotlight.</li>
-                </ol>
-                <p class="quiet">
-                  The app is not notarized by Apple yet. Use Finder's Open
-                  command after reviewing the release when macOS asks for
-                  confirmation.
-                </p>
-              </section>
-            </div>
-
-            <p class="callout">
-              <strong>Coming soon:</strong> a custom Homebrew Cask for macOS.
-              Until it is published, install the universal DMG from the release
-              page.
-            </p>
-
-            <section class="linux-install" id="linux-install">
-              <div class="section-heading compact-heading">
-                <p class="eyebrow">Linux</p>
-                <h3>Use the native package when possible</h3>
-              </div>
-              <div
-                class="distribution-table"
-                role="table"
-                aria-label="Supported Linux distributions"
-              >
-                <div class="table-row table-head" role="row">
-                  <span role="columnheader">Distribution</span>
-                  <span role="columnheader">Package</span>
-                  <span role="columnheader">Supported releases</span>
-                </div>
-                <div class="table-row" role="row">
-                  <span role="cell">Ubuntu</span><span role="cell">DEB</span
-                  ><span role="cell">24.04 and newer</span>
-                </div>
-                <div class="table-row" role="row">
-                  <span role="cell">Debian</span><span role="cell">DEB</span
-                  ><span role="cell">13 and newer</span>
-                </div>
-                <div class="table-row" role="row">
-                  <span role="cell">Fedora / openSUSE</span
-                  ><span role="cell">RPM</span
-                  ><span role="cell">Current supported releases</span>
-                </div>
-                <div class="table-row" role="row">
-                  <span role="cell">Arch Linux</span
-                  ><span role="cell">PKG.TAR.ZST</span
-                  ><span role="cell">Rolling</span>
-                </div>
-                <div class="table-row" role="row">
-                  <span role="cell">Other modern distributions</span
-                  ><span role="cell">AppImage</span
-                  ><span role="cell">Current releases</span>
-                </div>
-              </div>
-              <section class="command-block">
-                <div>
-                  <p class="command-label">Verified installer script</p>
-                  <code
-                    >curl --proto '=https' --tlsv1.2 --fail --location
-                    https://raw.githubusercontent.com/rozsazoltan/messenger/master/scripts/install-linux.sh
-                    | sh</code
-                  >
-                </div>
-                <button
-                  class="copy-button"
-                  type="button"
-                  data-copy="curl --proto '=https' --tlsv1.2 --fail --location https://raw.githubusercontent.com/rozsazoltan/messenger/master/scripts/install-linux.sh | sh"
-                >
-                  Copy
-                </button>
-              </section>
-              <p class="quiet">
-                Read the
-                <a
-                  href="https://github.com/rozsazoltan/messenger/blob/master/scripts/install-linux.sh"
-                  >installer script</a
-                >
-                before running it. Force the portable route by appending
-                <code> -s -- appimage</code>.
+            <section class="download-handoff">
+              <p class="eyebrow">Choose your platform</p>
+              <h3>Installation details live on their own page.</h3>
+              <p>
+                Each platform page keeps package-manager commands, direct
+                installers, architecture support, and release-channel guidance
+                in one linear reading flow.
               </p>
+              <a class="button button-primary" href="/download"
+                >Choose your platform</a
+              >
             </section>
           </section>
-
           <section id="updates">
             <div class="section-heading">
               <p class="eyebrow">Release channel</p>
@@ -1054,8 +915,8 @@
               <p class="eyebrow">Everyday controls</p>
               <h2>Keyboard controls</h2>
               <p>
-                Use the built-in panels for common desktop actions without
-                opening a browser menu.
+                Move through Messenger, start a chat, and reach everyday desktop
+                actions without opening a browser menu.
               </p>
             </div>
             <div class="shortcut-grid">
@@ -1083,11 +944,80 @@
               </div>
               <div>
                 <span class="shortcut-keys"
+                  ><kbd>Cmd</kbd>/<kbd>Ctrl</kbd><b>+</b><kbd>+</kbd></span
+                >
+                <span class="shortcut-label">Zoom in</span>
+              </div>
+              <div>
+                <span class="shortcut-keys"
+                  ><kbd>Cmd</kbd>/<kbd>Ctrl</kbd><b>+</b><kbd>-</kbd></span
+                >
+                <span class="shortcut-label">Zoom out</span>
+              </div>
+              <div>
+                <span class="shortcut-keys"
+                  ><kbd>Cmd</kbd>/<kbd>Ctrl</kbd><b>+</b><kbd>Shift</kbd><b>+</b
+                  ><kbd>M</kbd></span
+                >
+                <span class="shortcut-label">Focus message input</span>
+              </div>
+              <div>
+                <span class="shortcut-keys"
+                  ><kbd>Cmd</kbd>/<kbd>Ctrl</kbd><b>+</b><kbd>1</kbd>-<kbd
+                    >9</kbd
+                  ></span
+                >
+                <span class="shortcut-label"
+                  >Switch to one of the first nine conversations</span
+                >
+              </div>
+              <div>
+                <span class="shortcut-keys"
+                  ><kbd>Ctrl</kbd><b>+</b><kbd>Tab</kbd></span
+                >
+                <span class="shortcut-label">Next conversation</span>
+              </div>
+              <div>
+                <span class="shortcut-keys"
+                  ><kbd>Ctrl</kbd><b>+</b><kbd>Shift</kbd><b>+</b
+                  ><kbd>Tab</kbd></span
+                >
+                <span class="shortcut-label">Previous conversation</span>
+              </div>
+              <div>
+                <span class="shortcut-keys"
+                  ><kbd>Cmd</kbd>/<kbd>Ctrl</kbd><b>+</b><kbd>N</kbd></span
+                >
+                <span class="shortcut-label"
+                  >Open a new Messenger Next window</span
+                >
+              </div>
+              <div>
+                <span class="shortcut-keys"
+                  ><kbd>Cmd</kbd>/<kbd>Ctrl</kbd><b>+</b><kbd>K</kbd></span
+                >
+                <span class="shortcut-label">Search conversations</span>
+              </div>
+              <div>
+                <span class="shortcut-keys"
+                  ><kbd>Cmd</kbd>/<kbd>Ctrl</kbd><b>+</b><kbd>Shift</kbd><b>+</b
+                  ><kbd>K</kbd></span
+                >
+                <span class="shortcut-label"
+                  >Search messages in this conversation</span
+                >
+              </div>
+              <div>
+                <span class="shortcut-keys"
                   ><kbd>Ctrl</kbd><b>+</b><kbd>R</kbd></span
                 >
                 <span class="shortcut-label">Reload Messenger</span>
               </div>
             </div>
+            <p class="quiet">
+              Press the message-search shortcut again to close the conversation
+              panel.
+            </p>
           </section>
 
           <section id="settings">
@@ -1316,7 +1246,7 @@
             </span>
           </a>
           <nav class="footer-links" aria-label="Footer navigation">
-            <a href="/#download">Download</a>
+            <a href="/download">Download</a>
             <a href="/changelog">Changelog</a>
             <a href="/privacy">Privacy</a>
             <a href="https://github.com/rozsazoltan/messenger/releases"

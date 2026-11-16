@@ -15,9 +15,9 @@
 
 > [!NOTE]
 >
-> Version 1.9 arrives in August with one of the biggest updates yet. Expect configurable notifications, badge support, optional Insider builds for early feature access, better download handling, improved window management, and even lower CPU and RAM usage.
+> Version 1.10 is on the way, with multiple profile support as its main focus. Expect more keyboard shortcuts, fewer empty windows, a smaller installer, and UI improvements.
 >
-> The mission stays unchanged: deliver a free, fast, distraction-free Facebook Messenger desktop experience without ads, payments, or telemetry. [Download the current version](https://github.com/rozsazoltan/messenger#download) now to receive automatic update notifications and install version 1.9 with one click when released. Excited for the update? [Star the repository on GitHub](https://github.com/rozsazoltan/messenger) and read the full preview in [Discussion #27](https://github.com/rozsazoltan/messenger/discussions/27).
+> The mission stays unchanged: deliver a free, fast, distraction-free Facebook Messenger desktop experience without ads, payments, or telemetry. [Download the current version](https://github.com/rozsazoltan/messenger#download) now to receive automatic update notifications and install version 1.10 with one click when released. Excited for the update? [Star the repository on GitHub](https://github.com/rozsazoltan/messenger) and read the full roadmap in [Discussion #39](https://github.com/rozsazoltan/messenger/discussions/39).
 
 An unofficial, lightweight desktop wrapper for Facebook Messenger — built with
 Tauri, not Electron. No feed, no reels, no marketplace. Just your conversations

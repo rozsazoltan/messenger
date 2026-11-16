@@ -153,6 +153,32 @@
             </button>
           </section>
         </section>
+        <section class="install-option" aria-labelledby="linux-appimage">
+          <p class="eyebrow">Portable AppImage</p>
+          <h2 id="linux-appimage">Install without a package manager</h2>
+          <p>
+            Force the portable AppImage on any supported distribution. The
+            installer places it in <code>~/.local/bin</code> and reports when
+            that directory is not on <code>PATH</code>.
+          </p>
+          <section class="command-block">
+            <div>
+              <p class="command-label">POSIX shell</p>
+              <code
+                >curl --proto '=https' --tlsv1.2 --fail --location
+                https://raw.githubusercontent.com/rozsazoltan/messenger/master/scripts/install-linux.sh
+                | sh -s -- appimage</code
+              >
+            </div>
+            <button
+              class="copy-button"
+              type="button"
+              data-copy="curl --proto '=https' --tlsv1.2 --fail --location https://raw.githubusercontent.com/rozsazoltan/messenger/master/scripts/install-linux.sh | sh -s -- appimage"
+            >
+              Copy
+            </button>
+          </section>
+        </section>
         <section class="install-option" aria-labelledby="linux-preview">
           <p class="eyebrow">Prerelease enabled</p>
           <h2 id="linux-preview">Install the newest public semantic version</h2>

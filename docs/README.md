@@ -7,13 +7,13 @@ Static documentation for `Messenger Next`.
 From the Viewdock repository root, run:
 
 ```sh
-aube run docs:messenger
+pnpm run docs:messenger
 ```
 
 Then open `http://127.0.0.1:4173`. Use a different port when needed:
 
 ```sh
-aube run docs:messenger -- --port 4174
+pnpm run docs:messenger --port 4174
 ```
 
 ## Vercel

@@ -295,7 +295,10 @@ verify_selected_checksum() {
     END { exit found ? 0 : 1 }
   ' "$checksum_path" > "$checksum_entry" || error "Release checksums do not include $asset_name."
 
-  sha256sum --check "$checksum_entry" || error "Checksum verification failed for $asset_name."
+  (
+    cd "$work_dir"
+    sha256sum --check "$asset_name.sha256"
+  ) || error "Checksum verification failed for $asset_name."
 }
 
 parse_arguments "$@"
